@@ -8,10 +8,11 @@ function Header() {
        <div className='header'>
         <img src={logo} width={90} height={90} alt='syscotech'/>
         <ul class="nav-links">
-          <li class="upward"><a href="/">Dashboard</a></li>
-          <li class="upward"><Link to='/'>Portfolio</Link></li>
-          <li class="upward"><a href="/">Services</a></li>
-          <li class="upward"><Link to='/mainformsecond'>olympad burtguuleh</Link></li>
+          <li class="upward"><a href="/">Олимпиадын тухай</a></li>
+          <li class="upward"><Link to='/'>Ивээн тэтгэгч</Link></li>
+          <li class="upward"><a href="/">Шагнал</a></li>
+          <li class="upward"><a href="/">FAQ</a></li>
+          <li class="upward"><Link to='/form'>Бүртгүүлэх</Link></li>
         </ul>
       </div>
   )

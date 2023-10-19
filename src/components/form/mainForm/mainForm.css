@@ -14,28 +14,25 @@
   box-sizing: border-box;
   font-family: 'Comfortaa', cursive;
 }
-.infoSection p{
+
+.infoSection h1{
+  font-family: 'Comfortaa', cursive;
+}
+
+#fname{
+  margin:10px 0;
+  padding: 15px;
+  border-radius:10px;
+}
+
+#label{
+  display: flex;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.5;
-}
-
-#fname{
   margin:10px 0;
-  padding: 10px;
-  border-radius:10px;
-}
-
-#label{
-  color: #fff;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  margin:10px 0;
-  padding: 10px;
 }
 .form{
   display:flex;
@@ -53,69 +50,41 @@
   gap: 30px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.28) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(4, 80, 116, 0.28) 0%,
+    rgba(1, 28, 41, 0) 100%
   );
-  backdrop-filter: blur(30px);
   border-radius: 20px;
   width: min(900px, 100%);
-  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0.5px 0 1px rgba(4, 80, 116, 0.23) inset, 0 1px 0 0 rgba(3, 41, 58, 0.66) inset, 0 4px 16px rgba(2, 16, 22, 0.12);
   z-index: 10;
 }
 
-#label{
-  color: #fff;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  margin:10px 0;
-  padding: 10px;
-}
-.formDiv1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 5rem;
-}
 .form{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  flex-wrap: wrap;
+  align-items: start;
 }
 .formDiv{
   flex-direction: column;
   padding: 0 35px;
 display: flex;
 justify-content: center;
-align-items: center;
-width: 300px;
+width: 100%;
+}
+.mainForm{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#fname{
-  margin:10px 0;
-  padding: 10px;
-
-  border-radius:10px;
-}
-
-.infoSection p{
+.infoSection h1{
   color: #fff;
   font-weight: 500;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  margin-top: 30px;
   line-height: 1.5;
 }
 
-.movie-night {
-  background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
-}
-
 .btn {
+  text-decoration: underline;
   display: block;
   padding: 10px 40px;
   margin: 10px auto;
@@ -125,7 +94,7 @@ width: 300px;
   border: none;
   outline: none;
   text-decoration: none;
-  color: #784ba0;
+  color: #030f18;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -135,6 +104,14 @@ width: 300px;
 .btn:hover, .btn:focus, .btn:active, .btn:visited {
     transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
     animation: gelatine 0.5s 1;
+}
+
+.redSymbol{
+  color: #ff0000;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 @keyframes gelatine {

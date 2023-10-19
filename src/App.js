@@ -1,7 +1,8 @@
 import './App.css';
-import MainFormSecond from './components/form/mainFormSecond/mainFormSecond';
+import MainForm from './components/form/mainForm/mainForm';
 import {Routes, Route} from 'react-router-dom';
 import Header from './components/header/Header';
+import Pay from './components/form/pay/pay';
 
 function App() {
 
@@ -22,10 +23,10 @@ function App() {
           <li></li>
         </ul>
         <Routes>
-          <Route path='/mainformsecond' element={<MainFormSecond/>}/>
+          <Route path='/form' element={<MainForm/>}/>
+          <Route path='/pay' element={<Pay/>}/>
         </Routes>
     </section>
-    
     </div>
     
   );
