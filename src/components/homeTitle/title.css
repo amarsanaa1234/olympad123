@@ -7,7 +7,7 @@
 .titleback{
     width: 100%;
     max-width: 1440px;
-    background-image: linear-gradient(rgba(24,0,29,0) 62%,#18001d 73%),url('../../img/background2.png');
+    background-image: linear-gradient(rgba(24,0,29,0) 62%,#18001d 73%),url('../../img/background1.png');
     z-index: 1;
     background-position: 0 0,50% 0;
     background-repeat: repeat,no-repeat;

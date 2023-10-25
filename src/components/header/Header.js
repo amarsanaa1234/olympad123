@@ -22,7 +22,7 @@ window.addEventListener('scroll', changeBackground);
         <ul class="nav-links">
           <li class="upward"><Link to="/">Олимпиадын тухай</Link></li>
           <li class="upward"><Link to='/'>Ивээн тэтгэгч</Link></li>
-          <li class="upward"><Link to="/">Шагнал</Link></li>
+          <li class="upward"><Link to="/reward">Шагнал</Link></li>
           <li class="upward"><Link to="/">FAQ</Link></li>
           <li class="upward"><Link to='/form'>Бүртгүүлэх</Link></li>
         </ul>

@@ -6,6 +6,7 @@ import Pay from './components/form/pay/pay';
 import React, { useState, useEffect } from "react";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Title from './components/homeTitle/title';
+import Reward from './components/reward/reward';
 gsap.registerPlugin(CSSPlugin);
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
             <Header/>
               <Routes>
                 <Route path='/' element={<Title/>}/>
+                <Route path='reward' element={<Reward/>}/>
                 <Route path='/form' element={<MainForm/>}/>
                 <Route path='/pay' element={<Pay/>}/>
               </Routes>
