@@ -1,0 +1,71 @@
+.payment {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px;
+    background-image: url('../../../img/paymentImage.png');
+    border-radius: 50px;
+    width: min(650px, 100%);
+    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+  .creditHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px 0 40px;
+    align-items: center;
+  }
+
+  .creditNumber{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 40px 10px 40px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .creditTools{
+    padding: 10px 40px 0 40px;
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+  }
+
+  .toolsTitle h3{
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .toolsTitle p{
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .toolsTitle h2{
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .creditNumber p{
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .creditHeader h3{
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+  }

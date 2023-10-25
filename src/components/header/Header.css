@@ -1,14 +1,15 @@
 .header{
     z-index: 10;
     width: 100%;
-height: 100px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-background: linear-gradient( 180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 100% );
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 2rem;
   }
-  
+  .headerhide{
+    display: none;
+  }
 
 .nav-links{
     width: auto;
@@ -36,7 +37,7 @@ background: linear-gradient( 180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255
     left: 0;
     height: 3px;
     width: 0%;
-    background: #9e86da;
+    background: #240090;
     border-radius: 12px;
     transition: all 0.4s ease;
   }
@@ -48,4 +49,4 @@ background: linear-gradient( 180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255
   .nav-links li.upward a:hover:before{
     bottom: 0px;
     opacity: 1;
-  }
+  } 
