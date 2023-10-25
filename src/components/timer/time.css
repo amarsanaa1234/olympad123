@@ -1,0 +1,98 @@
+.timer-frame{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.timer-frame-time{
+    min-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.timer-h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-h1-span{
+    background: -webkit-linear-gradient(-86deg, #F05A28 5%, #D91C5C 53%, #A922FF 91%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+    color: #18001d;
+    text-transform: uppercase;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 5px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 90%;
+    position: relative;
+    top: 16px;
+    z-index: 1;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 991px){
+    .timer-frame{
+        flex-direction: column;
+    }
+    .timer-frame-time{
+        min-width: 100%;
+    }
+    .timer-h1-span {
+        font-size: 8vw;
+    }
+}
+@media screen and (min-width: 1440px){
+    .timer-h1-span {
+        font-size: 65px;
+    }
+}
+
+main{
+    padding-top: 50px;
+    max-width: 340px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  button{
+    background-color: transparent;
+    color: rgba(255,255,255,0.8);
+    border:0;
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  button.with-text{
+    width: auto;
+    background-color:rgba(255,255,255,0.1);
+    border-radius:10px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    line-height: 36px;
+  }
+  button.with-text svg{
+    width: 36px;
+    float:left;
+    margin-right: 5px;
+  }
+  
+  label{
+    display:block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
