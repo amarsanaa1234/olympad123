@@ -53,10 +53,10 @@ const handleSubmit = async (e) => {
           <div className="infoSection">
             <form className='form' onSubmit={handleSubmit}>
               <div className='mainForm'>
-                <input className='formDiv' value={firstName} placeholder='Овог' type="text" onChange={(e)=>setFirstName(e.target.value)} id="fname"/>  
-                <input className='formDiv' placeholder='Нэр' value={lastName} type="text" onChange={(e)=>setLastName(e.target.value)} id="fname"/>  
-                <input className='formDiv' placeholder='Gmail' value={gmail} type="gmail" onChange={(e)=>setGmail(e.target.value)} id="fname"/>  
-                <input className='formDiv' placeholder='Курс' value={course} type="number" onChange={(e)=>setCourse(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" value={firstName} placeholder='Овог' type="text" onChange={(e)=>setFirstName(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" placeholder='Нэр' value={lastName} type="text" onChange={(e)=>setLastName(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" placeholder='Gmail' value={gmail} type="gmail" onChange={(e)=>setGmail(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" placeholder='Курс' value={course} type="number" onChange={(e)=>setCourse(e.target.value)} id="fname"/>  
               </div>
               <div className='mainFormSentButton'>
                 <div className='sentButton'>
@@ -66,9 +66,9 @@ const handleSubmit = async (e) => {
                 </div>
               </div>
               <div className='mainForm'>
-                <input className='formDiv' placeholder='Дугаар' value={number} type="number" onChange={(e)=>setNumber(e.target.value)} id="fname"/>  
-                <input className='formDiv' placeholder='Анги' value={profession} onChange={(e)=>setProfession(e.target.value)} id="fname"/>  
-                <input className='formDiv' placeholder='Оюутаны код' value={studentCode} type="text" onChange={(e)=>setStudentCode(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" placeholder='Дугаар' value={number} type="number" onChange={(e)=>setNumber(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" placeholder='Анги' value={profession} onChange={(e)=>setProfession(e.target.value)} id="fname"/>  
+                <input className='formDiv' required="required" placeholder='Оюутаны код' value={studentCode} type="text" onChange={(e)=>setStudentCode(e.target.value)} id="fname"/>  
               </div>
               <div className='litleButtonFrame'>
                 <button className='litleButton' type='submit'>Send</button>
