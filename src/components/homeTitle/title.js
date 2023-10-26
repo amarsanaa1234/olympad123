@@ -3,6 +3,8 @@ import './title.css'
 import Timer from '../timer/timer'
 
 function Title() {
+  
+  
   return (
     <>
     <div className='titleback'>
@@ -15,12 +17,11 @@ function Title() {
         <div className='banner-content-litleBox'>
             <h1>Website Design Studio</h1>
           <h2>
-            We are a one-stop shop for amazing websites, graphics and digital marketing services.
+          Dev Hackathon Vol3 - 2023” Оюутан залуусын чөлөөт цагийг зөв боловсон үр дүнтэй өнгөрүүлэх, мэдлэг боловсрол бүтээлч сэтгэлгээг хөгжүүлэх, ажлын байранд бэлтгэх, улмаар улс орны хөгжилд нөлөөлөхүйц бүтээлүүдийг технологийн шийдлээр бий болгох зорилготойгоор "..." сэдвийн хүрээнд зохион байгуулагдаж байна
           </h2>
         </div>
       </div>
     </div>
-    <Timer/>
     </>
   )
 }

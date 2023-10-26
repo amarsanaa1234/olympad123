@@ -19,12 +19,12 @@ window.addEventListener('scroll', changeBackground);
   return (
        <div className={navbars ? 'header' : 'headerhide'}>
         <img src={logo} width={90} height={90} alt='syscotech'/>
-        <ul class="nav-links">
-          <li class="upward"><Link to="/">Олимпиадын тухай</Link></li>
-          <li class="upward"><Link to='/'>Ивээн тэтгэгч</Link></li>
-          <li class="upward"><Link to="/reward">Шагнал</Link></li>
-          <li class="upward"><Link to="/">FAQ</Link></li>
-          <li class="upward"><Link to='/form'>Бүртгүүлэх</Link></li>
+        <ul className="nav-links">
+          <li className="upward"><Link to="/">Олимпиадын тухай</Link></li>
+          <li className="upward"><Link to='/'>Ивээн тэтгэгч</Link></li>
+          <li className="upward"><Link to="/reward">Шагнал</Link></li>
+          <li className="upward"><Link to="/">FAQ</Link></li>
+          <li className="upward"><Link to='/form'>Бүртгүүлэх</Link></li>
         </ul>
       </div>
   )

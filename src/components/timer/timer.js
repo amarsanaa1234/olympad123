@@ -1,53 +1,26 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import './time.css';
+import { useTimer } from 'react-timer-hook';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
-function Timer() {
+function Timer({expiryTimestamp}) {
 
-    const [timer, setTimer] = useState("00:00:00")
-    const Ref = useRef()
+  const {
+    seconds,
+    minutes,
+    hours,
+    days,
+  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
+  const hourTime = hours < 10 ? `0${hours}` : `${hours}`;
+  const secondTime = seconds < 10 ? `0${seconds}` : `${seconds}`;
+  const minuteTime = minutes < 10 ? `0${minutes}` : `${minutes}`;
+  const dayTime = days < 30 ? `0${days}` : `${days}`;
+  const s = Array.from(secondTime.toString()).map(Number);
+  const m = Array.from(minuteTime.toString()).map(Number);
+  const h = Array.from(hourTime.toString()).map(Number);
+  const d = Array.from(dayTime.toString()).map(Number);
 
-    function getTimeRemaining(e) {
-      const total = Date.parse(e) - Date.parse(new Date());
-      const hour = Math.floor(total / (1000 * 60 * 60) % 24);
-      const seconds = Math.floor((total / 1000) % 60);
-      const minute = Math.floor((total / 1000 / 60) % 60);
-      return {
-        total,
-        hour,
-        minute,
-        seconds
-      }; 
-    }
-
-    function startTimer(e){
-      let {total, hour, minute, seconds} = getTimeRemaining(e);
-      if(total >= 0){
-        setTimer(
-          (hour > 9 ? hour : '0' + hour) + ':' +
-          (minute > 9 ? minute : '0' + minute) + ':' +
-          (seconds > 9 ? seconds : '0' + seconds)
-        )
-      }
-    }
-
-    function clearTimer(e) {
-        setTimer("00:00:10")
-        if(Ref.current) clearInterval(Ref.current);
-        const id = setInterval(() => {
-          startTimer(e)
-        })
-        Ref.current = id;
-      }
-
-    function getDeadTime(){
-      let deadLine = new Date()
-      deadLine.setSeconds(deadLine.getSeconds() + 10);
-      return deadLine;
-    }
-
-    useEffect(() => {
-      clearTimer(getDeadTime());
-    }, []);
+console.log(dayTime, hourTime, minuteTime, secondTime)
 
   return (
     <div className='timer-frame'>
@@ -57,13 +30,51 @@ function Timer() {
             <h1 className='timer-h1-span'>бүртгэл хаагдахад</h1>            
         </div>
         <div className='time'>
-            <h1>{timer}</h1>
+          <div className='timer-box'>
+            <div className='clock-box'>
+              <span className='clock-design'>{d[0]}</span>
+              <span className='clock-design'>{d[1]}</span>
+            </div>
+            <span className='timer-span'>day</span>
+          </div>
+          <div className='timer-box'>
+            <div className='clock-box'>
+              <span className='clock-design'>{h[0]}</span>
+              <span className='clock-design'>{h[1]}</span>
+            </div>
+            <span className='timer-span'>hours</span>
+          </div>
+          <div className='timer-box'>
+            <div className='clock-box'>
+              <span className='clock-design'>{m[0]}</span>
+              <span className='clock-design'>{m[1]}</span>
+            </div>
+            <span className='timer-span'>minutes</span>
+          </div>
+          <div className='timer-box'>
+            <div className='clock-box'>
+              <span className='clock-design'>{s[0]}</span>
+              <span className='clock-design'>{s[1]}</span>
+            </div>
+            <span className='timer-span'>seconds</span>
+          </div>
+          {/* <div style={{textAlign: 'center'}}>
+            <div style={{fontSize: '100px'}}>
+              <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+            </div>
+            <p>{isRunning ? 'Running' : 'Not running'}</p>
+          </div> */}
         </div>
       </div>
-      <div>
-        <ul>
-            <li>sad</li>
-            <li>asda</li>
+      <div className='organizer'>
+        <h1 className='organizerTitle'>Зохион байгуулагч</h1>
+        <ul className='organizerList'>
+            <li>Sys&Cotech club</li>
+            <li>Nasha tech</li>
+            <li>Call pro</li>
+            <li>ITC group</li>
+            <li>Khan bank</li>
+            <button className='organizerButton' type="">Мэдээлэл авах<BsFillArrowRightCircleFill/></button>
         </ul>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './mainForm.css'
-import { Link } from 'react-router-dom'
+import {HiMail} from 'react-icons/hi'
 import {db} from '../../../firebase-config';
 import { collection, addDoc } from 'firebase/firestore';
 
@@ -46,63 +46,37 @@ const handleSubmit = async (e) => {
 }
 
   return (
-    <>  
-      <div class="contentSection">
-          <div class="infoSection">
-            <h1>Олимпиадны форм</h1>
-            <form class='form' onSubmit={handleSubmit}>
+    <div className='contentFrame'>  
+      <div className="contentSection">
+        <h1>"2023 Olympad"<br/>бүртгүүлэх</h1>
+
+          <div className="infoSection">
+            <form className='form' onSubmit={handleSubmit}>
               <div className='mainForm'>
-                  <div className='formDiv'>
-                    <label id='label'>Овог{error && firstName.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                    <input value={firstName} type="text" onChange={(e)=>setFirstName(e.target.value)} id="fname"/>  
-                  </div>
-                  <div className='formDiv'>
-                    <label id='label'>Нэр{error && lastName.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                    <input value={lastName} type="text" onChange={(e)=>setLastName(e.target.value)} id="fname"/>  
-                  </div>
-                </div>
-              <div className='mainForm'>
-                <div className='formDiv'>
-                  <label id='label'>Gmail{error && gmail.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                  <input value={gmail} type="gmail" onChange={(e)=>setGmail(e.target.value)} id="fname"/>  
-                </div>
+                <input className='formDiv' value={firstName} placeholder='Овог' type="text" onChange={(e)=>setFirstName(e.target.value)} id="fname"/>  
+                <input className='formDiv' placeholder='Нэр' value={lastName} type="text" onChange={(e)=>setLastName(e.target.value)} id="fname"/>  
+                <input className='formDiv' placeholder='Gmail' value={gmail} type="gmail" onChange={(e)=>setGmail(e.target.value)} id="fname"/>  
+                <input className='formDiv' placeholder='Курс' value={course} type="number" onChange={(e)=>setCourse(e.target.value)} id="fname"/>  
               </div>
-              <div className='mainForm'>
-                <div className='formDiv'>
-                  <label id='label'>Дугаар{error && number.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                  <input value={number} type="number" onChange={(e)=>setNumber(e.target.value)} id="fname"/>  
-                </div>
-                <div className='formDiv'>
-                  <label id='label'>Курс{error && course.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                  <input value={course} type="number" onChange={(e)=>setCourse(e.target.value)} id="fname"/>  
-                </div>
-              </div>
-              <div className='mainForm'>
-                <div className='formDiv'>
-                  <label id='label'>Анги{error && profession.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                  <input value={profession} onChange={(e)=>setProfession(e.target.value)} id="fname"/>  
-                </div>
-              </div>
-              <div className='mainForm'>
-                <div className='formDiv'>
-                  <label id='label'>Оюутаны код{error && studentCode.length<=0 ? <p className='redSymbol'>*</p> : ""}</label>
-                  <input value={studentCode} type="text" onChange={(e)=>setStudentCode(e.target.value)} id="fname"/>  
-                </div>
-              </div>
-              <div className='mainForm'>
-                <div className='formDiv'>
-                  <Link to='/'>
-                    <button class="btn">Буцах</button>
-                  </Link>
-                  <button class="btn" type='submit'>
-                    Цааш нь
+              <div className='mainFormSentButton'>
+                <div className='sentButton'>
+                  <button className="btn" type='submit'>
+                    <HiMail/> Send
                   </button> 
-                  </div>
+                </div>
               </div>
-              </form>
-            </div>
+              <div className='mainForm'>
+                <input className='formDiv' placeholder='Дугаар' value={number} type="number" onChange={(e)=>setNumber(e.target.value)} id="fname"/>  
+                <input className='formDiv' placeholder='Анги' value={profession} onChange={(e)=>setProfession(e.target.value)} id="fname"/>  
+                <input className='formDiv' placeholder='Оюутаны код' value={studentCode} type="text" onChange={(e)=>setStudentCode(e.target.value)} id="fname"/>  
+              </div>
+              <div className='litleButtonFrame'>
+                <button className='litleButton' type='submit'>Send</button>
+              </div>
+            </form>
+          </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Title from './components/homeTitle/title';
 import Reward from './components/reward/reward';
+import Timer from './components/timer/timer';
 gsap.registerPlugin(CSSPlugin);
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
         duration: 0.6,
       });
   };
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 604800);
 
   return (
     <div className="AppContainer">
@@ -70,12 +73,16 @@ function App() {
       <div className="content">
         <div className='App'>
             <Header/>
-              <Routes>
+            <Title/>
+            <Timer expiryTimestamp={time}/>
+            <MainForm/>
+            <Pay/>
+              {/* <Routes>
                 <Route path='/' element={<Title/>}/>
                 <Route path='reward' element={<Reward/>}/>
                 <Route path='/form' element={<MainForm/>}/>
                 <Route path='/pay' element={<Pay/>}/>
-              </Routes>
+              </Routes> */}
         </div>
       </div>
       

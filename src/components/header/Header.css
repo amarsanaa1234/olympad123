@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    border-bottom: 1px solid #310050;
   }
   .headerhide{
     display: none;

@@ -6,33 +6,40 @@ import qr from '../../../img/qr.png';
 
 function Pay() {
   return (
-    <>
+    <div className='pay'>
       <div className="payment">
         <div className='creditHeader'>
-          <img src={qr} alt="credit logo" width={90} height={90}/>
-          <img src={logo} alt="credit logo" width={90} height={90}/>
+          <h1>Банкны QR</h1>
+          <img src={qr} alt="credit logo" width={250} height={250}/>
         </div>
-        <div className='creditNumber'>
-          <p>Дансны дугаар</p>
-          <p>хаан банк</p>
-          <h2>57 20 17 14 59</h2>
-        </div>
+        
         <div className='creditTools'>
-          <div className='toolsTitle'>
-            <p>Дансны нэр</p>
-            <h3>Амарсанаа</h3>
-          </div>
-          <div className='toolsTitle'>
-            <p>Гүйлгээний дүн</p>
-            <h3>5000$</h3>
-          </div>
-          <div className='toolsTitle'>
-            <p>Гүйлгээний утга</p>
-            <h3>Овог нэр, дугаар</h3>
-          </div>
+        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+        <form action="">
+          Банк
+            <input class='input-field' type="text" disabled="disabled" value='Хаан банк'></input>
+            Дансны дугаар
+            <input class='input-field' type="text" disabled="disabled" value='5720171459'></input>
+            <td className='input-field2'>
+              ДАНСНЫ НЭР
+              <input class='input-field1' type="text" disabled="disabled" value='Амарсанаа'></input>
+            </td>
+            <table class='half-input-table'>
+              <tr>
+                <td>ДАНСНЫ НЭР
+                  <input class='input-field' type="text" disabled="disabled" value='Амарсанаа'></input>
+                </td>
+                <td>ГҮЙЛГЭЭНИЙ ДҮН
+                  <input class='input-field' type="text" disabled="disabled" value='5,000₮'></input>
+                </td>
+              </tr>
+            </table>
+            ГҮЙЛГЭЭНИЙ УТГА
+            <input class='input-field' type="text" disabled="disabled" value='өөрийн нэр, утасны дугаар'></input>
+            </form>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
