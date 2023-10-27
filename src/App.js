@@ -1,12 +1,10 @@
 import './App.css';
 import MainForm from './components/form/mainForm/mainForm';
-import {Routes, Route} from 'react-router-dom';
 import Header from './components/header/Header';
 import Pay from './components/form/pay/pay';
 import React, { useState, useEffect } from "react";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Title from './components/homeTitle/title';
-import Reward from './components/reward/reward';
 import Timer from './components/timer/timer';
 gsap.registerPlugin(CSSPlugin);
 
@@ -77,12 +75,6 @@ function App() {
             <Timer expiryTimestamp={time}/>
             <MainForm/>
             <Pay/>
-              {/* <Routes>
-                <Route path='/' element={<Title/>}/>
-                <Route path='reward' element={<Reward/>}/>
-                <Route path='/form' element={<MainForm/>}/>
-                <Route path='/pay' element={<Pay/>}/>
-              </Routes> */}
         </div>
       </div>
       

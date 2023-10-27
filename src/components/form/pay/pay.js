@@ -1,6 +1,5 @@
 import React from 'react';
 import './pay.css';
-import logo from '../../../img/Modern Sys_CoLogo.png';
 import qr from '../../../img/qr.png';
 
 
@@ -9,12 +8,12 @@ function Pay() {
     <div className='pay'>
       <div className="payment">
         <div className='creditHeader'>
-          <h1>Банкны QR</h1>
+          <h1>Банкны QR </h1>
           <img src={qr} alt="credit logo" width={250} height={250}/>
         </div>
         
         <div className='creditTools'>
-        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' alt='visa card' height='80' class='credit-card-image' id='credit-card-image'/>
         <form action="">
           Банк
             <input class='input-field' type="text" disabled="disabled" value='Хаан банк'></input>

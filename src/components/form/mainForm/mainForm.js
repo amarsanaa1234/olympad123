@@ -13,16 +13,11 @@ const [number, setNumber] = useState("");
 const [course, setCourse] = useState("");
 const [profession, setProfession] = useState("");
 const [studentCode, setStudentCode] = useState("");
-const [error, setError] = useState(false);
-
 
 const usersCollectionRef = collection(db, "form");
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  if(firstName.length === 0 || lastName.length === 0 || gmail.length === 0 || number.length === 0 || course.length === 0 || profession.length === 0 || studentCode.length === 0){
-        setError(true);
-    }else{
       await addDoc(usersCollectionRef,{
         name: firstName,
         surName: lastName,
@@ -39,10 +34,8 @@ const handleSubmit = async (e) => {
         setCourse("");
         setProfession("");
         setStudentCode("");
-        setError("");
         alert("Success message has been submitted 👍");
       })
-    }
 }
 
   return (

@@ -1,6 +1,5 @@
 import React from 'react'
 import './title.css'
-import Timer from '../timer/timer'
 
 function Title() {
   
