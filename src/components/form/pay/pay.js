@@ -6,6 +6,7 @@ import qr from '../../../img/qr.png';
 function Pay() {
   return (
     <div className='pay'>
+      <h2>Хураамж</h2>
       <div className="payment">
         <div className='creditHeader'>
           <h1>Банкны QR </h1>

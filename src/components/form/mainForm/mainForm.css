@@ -234,6 +234,9 @@
   .litleButtonFrame{
     display: none;
   }
+  .contentFrame{
+    height: auto;
+  }
 }
 @media screen and (max-width: 991px){
   .contentSection h1{
@@ -264,6 +267,9 @@
 @media screen and (max-width: 1660px){
   .contentFrame{
     background-size: contain;
+  }
+  .contentFrame{
+    height: auto;
   }
 }
 

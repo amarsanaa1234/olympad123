@@ -1,9 +1,17 @@
 .pay{
   width: 100vw;
-  height: 800px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.pay h2{
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 110%;
 }
 .payment {
     margin-left: auto;
@@ -42,7 +50,7 @@
   .creditTools{
     border-radius: 0px 50px 50px 0px;
     height: 100%;
-    background-color: #4488DD;
+    background-color: #6844dd;
     padding: 10px 40px 0 40px;
     width: 100%;
     display: flex;
@@ -101,7 +109,7 @@
     width:100%;
   }
   .half-input-table td:first-of-type {
-    border-right:10px solid #4488dd;
+    border-right:10px solid #6844dd;
     width:50%;
   }
   .pay-btn {
@@ -186,4 +194,9 @@
   .pay{
     height: 925px;
   }
+}
+@media screen and (min-width: 1440px){
+ .pay h2 {
+    font-size: 44px;
+}
 }

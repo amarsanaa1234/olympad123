@@ -6,6 +6,8 @@ import React, { useState, useEffect } from "react";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Title from './components/homeTitle/title';
 import Timer from './components/timer/timer';
+import Mentor from './components/mentor/mentor';
+import Footer from './components/footer/footer';
 gsap.registerPlugin(CSSPlugin);
 
 function App() {
@@ -75,6 +77,8 @@ function App() {
             <Timer expiryTimestamp={time}/>
             <MainForm/>
             <Pay/>
+            <Mentor/>
+            <Footer/>
         </div>
       </div>
       
