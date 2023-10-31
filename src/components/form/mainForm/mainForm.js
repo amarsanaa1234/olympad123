@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
   return (
     <div className='contentFrame'>  
       <div className="contentSection">
-        <h1>"2023 Olympad"<br/>бүртгүүлэх</h1>
+        <h1>"2023 Olympiad"<br/>бүртгүүлэх</h1>
 
           <div className="infoSection">
             <form className='form' onSubmit={handleSubmit}>

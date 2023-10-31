@@ -11,7 +11,7 @@ function Title() {
         <div className="large-h1-span mobile-sizing">
           Sys&Cotech
           <br/>
-          Olympad
+          Olympiad
         </div>
         <div className='banner-content-litleBox'>
             <h1>Website Design Studio</h1>
