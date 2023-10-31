@@ -51,14 +51,15 @@
 }
 .reward-text-bg{
     display: flex;
-    padding: 10px 20px;
+    padding: 10px;
+    font-size: 30px;
     justify-content: center;
     border-style: solid;
     border-radius: 10px;
     border-color: #F05A27;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 780px) {
     /* For mobile phones: */
     .reward-text2 {
       display: grid;
@@ -69,5 +70,31 @@
     }
     .reward_h{
         font-size: 30px;
+    }
+    h5{
+        font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    /* For mobile phones: */
+    .reward-text2 {
+      display: grid;
+      justify-content: center;
+    }
+    .reward{
+        height: 900px;
+    }
+    .reward_h{
+        font-size: 24px;
+    }
+    .reward-text-st{
+        font-size: 22px;
+    }
+    .reward-text-bg{
+        font-size: 22px;
+        padding: 5px 10px;
+    }
+    h5{
+        font-size: 12px;
     }
   }
