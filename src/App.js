@@ -9,6 +9,7 @@ import Timer from './components/timer/timer';
 import Mentor from './components/mentor/mentor';
 import Footer from './components/footer/footer';
 import Reward from './components/reward/reward';
+import Faq from './components/faq/Faq';
 gsap.registerPlugin(CSSPlugin);
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
           <Mentor/>
           <MainForm/>
           <Pay/>
+          <Faq/>
           <Footer/>
         </div>
       </div>
